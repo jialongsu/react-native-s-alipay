@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-s-alipay.git",
-    "baseUrl": "https://github.com/github_account/react-native-s-alipay"
+    "url": "git+https://github.com/1035901787/react-native-s-alipay.git",
+    "baseUrl": "https://github.com/1035901787/react-native-s-alipay"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
     "name": "arno",
-    "email": "1035901787@qq.com"
+    "email": "jialong.su@aliyun.com"
   },
   "files": [
     "android",
