@@ -1,8 +1,9 @@
 {
   "name": "react-native-s-alipay",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "React Native 支付宝模块，同时支持ios和android，react native 0.60.0+  autolink",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   "files": [
     "android",
     "iosLib",
+    "index.d.ts",
     "index.js"
   ],
   "license": "MIT",
