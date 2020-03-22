@@ -17,8 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* exampleTests.m */; };
 		4ABEF9352F3C12270CD10AD0 /* libPods-example-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C936134040402DD7F0D049 /* libPods-example-tvOSTests.a */; };
-		4BD4EF8E23BA3ECB0047AFF2 /* RNSAlipayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4EF8C23BA3ECB0047AFF2 /* RNSAlipayManager.m */; };
-		4BD4EF8F23BA3ECB0047AFF2 /* RNSAlipayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD4EF8D23BA3ECB0047AFF2 /* RNSAlipayModule.swift */; };
+		4B9AD2CF24270BE90076B290 /* RNSAlipayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9AD2CD24270BE90076B290 /* RNSAlipayManager.m */; };
 		A9A0A7BEB551DFA6AE88C416 /* libPods-example-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5904CF82B7FFDE168977AC3 /* libPods-example-tvOS.a */; };
 		C05ABBAB55DC83EEC9B2859E /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CA048F8782A46264C3DE80 /* libPods-example.a */; };
 		E9773C1E4AEB11C8BDD9EE87 /* libPods-exampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B8EA0BC87DADF5A5C16DF /* libPods-exampleTests.a */; };
@@ -58,9 +57,8 @@
 		2D02E47B1E0B4A5D006451C7 /* example-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "example-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* example-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "example-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CB98C24853767253F5279C /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
-		4BD4EF8C23BA3ECB0047AFF2 /* RNSAlipayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSAlipayManager.m; sourceTree = "<group>"; };
-		4BD4EF8D23BA3ECB0047AFF2 /* RNSAlipayModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNSAlipayModule.swift; sourceTree = "<group>"; };
-		4BD4EF9023BA3EEA0047AFF2 /* example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "example-Bridging-Header.h"; sourceTree = "<group>"; };
+		4B9AD2CD24270BE90076B290 /* RNSAlipayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSAlipayManager.m; sourceTree = "<group>"; };
+		4B9AD2CE24270BE90076B290 /* RNSAlipayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSAlipayManager.h; sourceTree = "<group>"; };
 		56CA048F8782A46264C3DE80 /* libPods-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5809D33F44D6170AE057860B /* Pods-exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-exampleTests.debug.xcconfig"; path = "Target Support Files/Pods-exampleTests/Pods-exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C45DF8643EE677D7CDBA5DE /* Pods-example-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-example-tvOSTests/Pods-example-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,7 +128,7 @@
 		13B07FAE1A68108700A75B9A /* example */ = {
 			isa = PBXGroup;
 			children = (
-				4BD4EF8B23BA3ECB0047AFF2 /* RNSAlipay */,
+				4B9AD2CC24270BE90076B290 /* RNSAlipay */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -138,7 +136,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				4BD4EF9023BA3EEA0047AFF2 /* example-Bridging-Header.h */,
 			);
 			name = example;
 			sourceTree = "<group>";
@@ -156,13 +153,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4BD4EF8B23BA3ECB0047AFF2 /* RNSAlipay */ = {
+		4B9AD2CC24270BE90076B290 /* RNSAlipay */ = {
 			isa = PBXGroup;
 			children = (
-				4BD4EF8C23BA3ECB0047AFF2 /* RNSAlipayManager.m */,
-				4BD4EF8D23BA3ECB0047AFF2 /* RNSAlipayModule.swift */,
+				4B9AD2CD24270BE90076B290 /* RNSAlipayManager.m */,
+				4B9AD2CE24270BE90076B290 /* RNSAlipayManager.h */,
 			);
-			path = RNSAlipay;
+			name = RNSAlipay;
+			path = "../node_modules/react-native-s-alipay/iosLib/RNSAlipay";
 			sourceTree = "<group>";
 		};
 		611CB5B1FADC578596D8D84B /* Pods */ = {
@@ -245,7 +243,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				513868DD32EE89065399CB02 /* [CP] Copy Pods Resources */,
+				0989208B6739C85D7B59C434 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,21 +388,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		513868DD32EE89065399CB02 /* [CP] Copy Pods Resources */ = {
+		0989208B6739C85D7B59C434 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -421,6 +405,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-example/Pods-example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
 		5A1D2A0F01F3EFA13FC5C271 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -564,8 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				4BD4EF8F23BA3ECB0047AFF2 /* RNSAlipayModule.swift in Sources */,
-				4BD4EF8E23BA3ECB0047AFF2 /* RNSAlipayManager.m in Sources */,
+				4B9AD2CF24270BE90076B290 /* RNSAlipayManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,7 +616,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5809D33F44D6170AE057860B /* Pods-exampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -643,7 +639,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A37CABA4302B83126B37786 /* Pods-exampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = exampleTests/Info.plist;

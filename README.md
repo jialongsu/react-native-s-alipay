@@ -51,25 +51,13 @@ cd ios && pod install
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191230214044971.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaGFwcHlfbG9uZw==,size_16,color_FFFFFF,t_70)
 点击找到本项目node_modules下的react-native-s-alipay -> iosLib -> RNSAlipay, 将整个RNSAlipay文件夹导入。
 
-## 第四步
-在项目中创建bridging header文件，选中项目，右键New File，选择Header File，命名为 你的工程名 + -Bridging-Header，如：example-Bridging-Header，然后在该文件夹中加入以下代码：
-
-```js
-#import <React/RCTBridgeModule.h>
-#import <AlipaySDK/AlipaySDK.h>
-```
-
-## 第五步
-配置桥接文件：
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20191230220214202.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaGFwcHlfbG9uZw==,size_16,color_FFFFFF,t_70)
-
-## 第六步：
+## 第四步：
 在AppDelegate.m文件中添加以下两个方法，来处理跳转的url：
 
 头部引用：
 
 ```js
-#import <AlipaySDK/AlipaySDK.h>
+#import "RNSAlipayManager.h"
 ```
 
 ```js
@@ -80,9 +68,7 @@ cd ios && pod install
     
     if ([url.host isEqualToString:@"safepay"]) {
         //跳转支付宝钱包进行支付，处理支付结果
-        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-            NSLog(@"result = %@",resultDic);
-        }];
+        [RNSAlipayManager handleCallback:url];
     }
     return YES;
 }
@@ -92,15 +78,13 @@ cd ios && pod install
 {
     if ([url.host isEqualToString:@"safepay"]) {
         //跳转支付宝钱包进行支付，处理支付结果
-        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-            NSLog(@"result = %@",resultDic);
-        }];
+        [RNSAlipayManager handleCallback:url];
     }
     return YES;
 }
 ```
 
-## 第七步：
+## 第五步：
 添加url type：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191230215350413.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3VuaGFwcHlfbG9uZw==,size_16,color_FFFFFF,t_70)
 到此支付宝配置结束。

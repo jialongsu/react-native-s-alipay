@@ -4414,9 +4414,9 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
 
-react-native-s-alipay@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-s-alipay/-/react-native-s-alipay-1.0.1.tgz#26db779dc9ef523e43d794bfafa0c952a5ef3913"
+react-native-s-alipay@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-native-s-alipay/-/react-native-s-alipay-1.0.7.tgz#245b7c41a74a6c71911040e448d86ae1e01d7709"
 
 react-native@0.61.5:
   version "0.61.5"
